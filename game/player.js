@@ -2,7 +2,7 @@ var Player = function(name, color, position, direction) {
 
     this.name = name;
     this.position = position;
-    this.life = 3;
+    this.life = 100;
     this.bullets = new Array();
     this.direction = direction;
     this.speed = 0;
