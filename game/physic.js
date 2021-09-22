@@ -12,7 +12,28 @@ function update()
         player1.accelerate(moveDistance);
     if (keyboard.pressed("down"))
         player1.decelerate(moveDistance);
+    if (player2.position.x <= - WIDTH / 2)
+        player2.turnRight(Math.PI);
+    if (player2.position.x >= WIDTH / 2)
+        player2.turnRight(Math.PI);
+   // if (ennemy_acceleration == 1)
+   // {
+   //     player2.accelerate(moveDistance);
+   //     if(player2.position.x >= 500){
+   //         ennemy_acceleration = -ennemy_acceleration
+   //         console.log("T NUL WLH " + ennemy_acceleration)
+   //     }
+   // }
+   // else
+   // {
+   //     player2.decelerate(moveDistance);
+   //     if(player2.position.x <= 0)
+   //         ennemy_acceleration = -ennemy_acceleration
+   // }
 
     player1.move();
+    player2.accelerate(moveDistance)
+    player2.move();
+    console.log(player2.position.x)
     controls.update();
 }
