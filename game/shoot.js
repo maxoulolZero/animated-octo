@@ -36,6 +36,7 @@ function collisions()
 {
     bullet_collision();
     bullet_collision_player();
+    bullet_collision_on_player();
     player_collision();
     player_falling();
 }
@@ -66,6 +67,23 @@ function bullet_collision_player()
             scene.remove(player1.bullets[i]);
             player2.dead();
             player1.bullets.splice(i, 1);
+            i--;
+        }
+    }
+
+}
+
+function bullet_collision_on_player()
+{
+    //collision between ennemy bullet and player
+    for (var i = 0; i < player1.bullets.length; i++)
+    {
+        if (Math.abs(player2.bullets[i].position.x) <= player1.position.x  + 1 &&
+            Math.abs(player2.bullets[i].position.y) <= player1.position.y  + 1)
+        {
+            scene.remove(player1.bullets[i]);
+            player1.life -= 1;
+            player2.bullets.splice(i, 1);
             i--;
         }
     }

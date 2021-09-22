@@ -25,7 +25,7 @@ A video game with three.js
 - [X] : As a player, I want to be stop when I go into the left wall
 - [X] : As a player, I want to have a ground when I start the game
 - [X] : As a player, I want to see ennemy
-- [ ] : As a player, I want to destroy ennemy when I shot them
-- [ ] : As a ennemy, I want to move on one axe
-- [ ] : As a player, I want to decrease my life when I am touch by an ennemy
+- [X] : As a player, I want to destroy ennemy when I shot them
+- [X] : As a ennemy, I want to move on one axe
+- [maybe (j'ai rajouté une fonction qui enleve 1 de vie au joueur 1 si une balle du joueur 2 le touche mais pas testé)] : As a player, I want to decrease my life when I am touch by an ennemy
 - [ ] : As a player, I want to decrease my life when I fall 
