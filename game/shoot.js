@@ -35,6 +35,7 @@ function shoot()
 function collisions()
 {
     bullet_collision();
+    bullet_collision_player();
     player_collision();
     player_falling();
 }
@@ -48,6 +49,22 @@ function bullet_collision()
             Math.abs(player1.bullets[i].position.y) >= HEIGHT / 2)
         {
             scene.remove(player1.bullets[i]);
+            player1.bullets.splice(i, 1);
+            i--;
+        }
+    }
+}
+
+function bullet_collision_player()
+{
+    //collision between bullet and walls
+    for (var i = 0; i < player1.bullets.length; i++)
+    {
+        if (Math.abs(player1.bullets[i].position.x) <= player2.position.x  + 1 &&
+            Math.abs(player1.bullets[i].position.y) <= player2.position.y  + 1)
+        {
+            scene.remove(player1.bullets[i]);
+            player2.dead();
             player1.bullets.splice(i, 1);
             i--;
         }
