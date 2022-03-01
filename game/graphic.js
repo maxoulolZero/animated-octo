@@ -8,10 +8,7 @@ function init()
 
     $container = $('#container');
     renderer = new THREE.WebGLRenderer();
-    camera = new THREE.PerspectiveCamera(VIEW_ANGLE,
-                                    ASPECT,
-                                    NEAR,
-                                    FAR);
+    camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, NEAR, FAR);
     scene = new THREE.Scene();
     controls = new THREE.OrbitControls(camera, renderer.domElement);
 
