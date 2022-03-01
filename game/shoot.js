@@ -29,7 +29,6 @@ function shoot()
         player1.bullets[i].position.x += moveDistance * Math.cos(player1.bullets[i].angle);
         player1.bullets[i].position.y += moveDistance * Math.sin(player1.bullets[i].angle);
     }
-
 }
 
 function collisions()
@@ -70,7 +69,6 @@ function bullet_collision_player()
             i--;
         }
     }
-
 }
 
 function bullet_collision_on_player()
@@ -87,7 +85,6 @@ function bullet_collision_on_player()
             i--;
         }
     }
-
 }
 
 function player_collision()
@@ -133,5 +130,4 @@ function player_falling()
            player1.dead();
         }
     }
-
 }
